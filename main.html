@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="content1"></div>
+    <div class="content2"></div>
+    <div class="div2"></div>
+    <div class="div3">
+        <div class="polosa">
+            <div class="item active" data-mytag="1" onclick="functionForSlider(this)"></div>
+            <div class="item" data-mytag="2" onclick="functionForSlider(this)"></div>
+            <div class="item" data-mytag="3" onclick="functionForSlider(this)"></div>
+            <div class="item" data-mytag="4" onclick="functionForSlider(this)"></div>
+        </div>
+        <p class="myTag" id="mytag_1">Начинаем с простенького. Судя по мультфильму, Чебурашка и Гена много гуляли и ходили пешком. А вот если бы они устали, то могли бы спокойно воспользоваться любым другим способом передвижения, кроме одного. Какого?</p>
+        <p class="myTag" id="mytag_2" style="display: none;">Текст 1</p>
+        <p class="myTag" id="mytag_3" style="display: none;">Текст 2</p>
+        <p class="myTag" id="mytag_4" style="display: none;">Текст 3</p>
+        <div class="blockForImages">
+            <div class="imageForSlider"><img class="img" id="img_4" onclick="functionForAnswer(4)" src="img/image_4.png"></div>
+            <div class="imageForSlider"><img class="img" id="img_1" onclick="functionForAnswer(1)" src="img/image_1.png"></div>
+            <div class="imageForSlider"><img class="img" id="img_2" onclick="functionForAnswer(2)" src="img/image_2.png"></div>
+            <div class="imageForSlider"><img class="img" id="img_3" onclick="functionForAnswer(3)" src="img/image_3.png"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function functionForSlider(element) {
+        let nodeListLevel = document.querySelectorAll(".item"),
+            nodeListText = document.querySelectorAll(".myTag"),
+            number = element.dataset.mytag;
+        for (let index = 0; index < nodeListLevel.length; index++) {
+            nodeListLevel[index].classList.remove("active");
+        }
+        for (let index = 0; index < nodeListText.length; index++) {
+            nodeListText[index].style.display = "none";
+        }
+        element.classList.add("active");
+        document.getElementById("mytag_" + number).style.display = "block";
+    }
+
+    function functionForAnswer(elem) {
+        var nodeList = document.querySelectorAll(".img");
+        for (let index = 0; index < nodeList.length; index++) {
+            nodeList[index].classList.remove("true");
+            nodeList[index].classList.remove("false");
+        }
+        elem == 1 ? document.getElementById("img_" + elem).classList.add("true") : document.getElementById("img_" + elem).classList.add("false");
+    }
+</script>

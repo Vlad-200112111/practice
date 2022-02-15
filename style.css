@@ -1,0 +1,133 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    background: #2E015C;
+}
+
+.uyt {
+    width: 25%;
+    border-radius: 10px;
+}
+
+.true {
+    border: 10px solid rgba(0, 255, 115, 0.856);
+}
+
+.false {
+    border: 10px solid rgba(255, 0, 0, 0.856);
+}
+
+.content1 {
+    position: absolute;
+    width: 23.75%;
+    height: 46%;
+    left: 67.3%;
+    top: 8%;
+    background-image: url("img/flower2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img {
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.content2 {
+    position: absolute;
+    width: 24.3%;
+    height: 52%;
+    left: 7%;
+    top: 33.5%;
+    background-image: url("img/flower1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.div2 {
+    position: absolute;
+    width: 57.5%;
+    height: 76.1%;
+    left: 21.25%;
+    top: 12.8%;
+    background: linear-gradient(261.38deg, #0060D9 18.47%, #004193 93.48%);
+    border-radius: 60px;
+}
+
+.div3 {
+    position: absolute;
+    width: 57%;
+    height: 75.2%;
+    left: 21.25%;
+    top: 12.8%;
+    background: linear-gradient( 240deg, #003dce -3.6%, rgba(20, 163, 252, 0.795) 50%, #003dce 95%);
+    border-radius: 51px;
+}
+
+.myTag {
+    margin-left: auto;
+    margin-right: auto;
+    width: 589px;
+    height: 238px;
+    left: 666px;
+    top: 307px;
+    font-family: PT Sans Caption;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 40px;
+    /* or 182% */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.imageForSlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.img:hover {
+    transform: translate(-5%, -5%);
+    box-shadow: 10px 15px 0px #004baa;
+    cursor: pointer;
+}
+
+.blockForImages {
+    margin-top: 60px;
+    display: flex;
+}
+
+.polosa {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    width: 62%;
+    height: 1.5%;
+    background: #0096EC;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    width: 25%;
+    border-radius: 10px;
+}
+
+.active {
+    background: #00ec12;
+}
